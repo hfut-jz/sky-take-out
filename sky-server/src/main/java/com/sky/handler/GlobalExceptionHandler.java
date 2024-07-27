@@ -39,8 +39,7 @@ public class GlobalExceptionHandler {
             //提示前端是字符串异常
             //正常后端开发不会用黑马这种这么原始的方法的，可以重新定义一个异常类来优化流程。
             DuplicateException duplicateException;
-            String msg=duplicateException.getMessage();
-            return Result.error(msg);
+            return Result.error(MessageConstant.ALREADY_EXISTS);
         }
         else{
             return Result.error(MessageConstant.UNKNOWN_ERROR);
