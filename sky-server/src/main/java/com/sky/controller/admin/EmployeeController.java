@@ -98,5 +98,23 @@ public class EmployeeController {
         PageResult pageResult=employeeService.pageQuery(employeePageQueryDTO);
         return Result.success(pageResult);
     }
+    //并不是泛型，其的泛型可以不要
+    @PostMapping("/status")
+    @ApiOperation("禁用员工")
+    public Result banorstart(@PathVariable Integer status,Long id){
+        log.info("得知其是否要进行禁用,{},{}",status,id);
+        employeeService.banorstart(status,id);
+        return Result.success();
+    }
+    /**
+     * 3.修改员工
+     */
+    @PutMapping()
+    @ApiOperation("编辑员工")
+    public Result Edit(@RequestBody EmployeeDTO employeeDTO){
+        log.info("编辑其的员工信息,{}",employeeDTO);
+        employeeService.Edit(employeeDTO);
+        return Result.success();
+    }
 
 }

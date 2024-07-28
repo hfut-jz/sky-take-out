@@ -17,4 +17,8 @@ public interface EmployeeService {
     void add(EmployeeDTO employeeDTO);
 //不是void，需要返回信息
     PageResult pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
+
+    void banorstart(Integer status,Long id);
+
+    void Edit(EmployeeDTO employeeDTO);
 }

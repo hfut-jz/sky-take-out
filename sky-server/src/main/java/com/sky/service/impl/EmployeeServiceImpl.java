@@ -93,5 +93,20 @@ public class EmployeeServiceImpl implements EmployeeService {
         List<Employee> records = page.getResult();
         return new PageResult(total,records);
     }
+    public void banorstart(Integer status,Long id){
+     //首先获取其的id
+     //通过mapper中的语句来使得其的状态为0
+        Employee employee= Employee.builder()
+                .id(id)
+                .status(status)
+                .build();
+        employeeMapper.update(employee);
+    }
+    public void Edit(EmployeeDTO employeeDTO){
+        //获取其的实体类后进行编辑。
+        Employee employee;
+
+        employeeMapper.edits();
+    }
 
 }
