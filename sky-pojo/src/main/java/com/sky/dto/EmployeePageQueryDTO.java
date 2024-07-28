@@ -17,3 +17,4 @@ public class EmployeePageQueryDTO implements Serializable {
     private int pageSize;
 
 }
+//DTO类中已经封装，没必要自己再写了。

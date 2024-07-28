@@ -20,3 +20,4 @@ public class PageResult implements Serializable {
     private List records; //当前页数据集合
 
 }
+//已经封装，开发功能即可。
