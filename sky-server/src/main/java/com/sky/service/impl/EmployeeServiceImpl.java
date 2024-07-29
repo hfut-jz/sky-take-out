@@ -105,8 +105,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void Edit(EmployeeDTO employeeDTO){
         //获取其的实体类后进行编辑。
         Employee employee;
-
-        employeeMapper.edits();
+// TODO: 2024/7/28 edits方法的填写 
+        //employeeMapper.edits();
     }
 
 }
